@@ -52,9 +52,10 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(value1, value2) {
-  const result = (value1 + value2) / 2;
-  return result;
+function getAverage(/* value1, value2 */) {
+  throw new Error('Not implemented');
+  // const result = (value1 + value2) / 2;
+  // return result;
 }
 
 /**
@@ -233,8 +234,12 @@ function isPrime(n) {
  *   toNumber(42, 0) => 42
  *   toNumber(new Number(42), 0) => 42
  */
-function toNumber(/* value, def */) {
-  throw new Error('Not implemented');
+function toNumber(value, def) {
+  let result = def;
+  if (Number.isInteger(Number(value)) && value !== null) {
+    result = value;
+  }
+  return result;
 }
 
 /**
@@ -389,8 +394,9 @@ function numberToStringInBase(/* number, base */) {
  * @example:
  * 12345, 2    => '1.23e+4'
  */
-function toExponential(/* number, fractionDigits */) {
-  throw new Error('Not implemented');
+function toExponential(number, fractionDigits) {
+  const result = number.toExponential(fractionDigits);
+  return result;
 }
 
 /**
@@ -579,8 +585,9 @@ function roundToNearestInteger(number) {
  * 5.4  => 5
  * -5.5 => -5
  */
-function getIntegerPartNumber(/* number */) {
-  throw new Error('Not implemented');
+function getIntegerPartNumber(number) {
+  const result = Math.trunc(number);
+  return result;
 }
 
 /**
@@ -611,8 +618,9 @@ function getSumOfNumbers(/* x1, x2, x3 */) {
  * -5, -6 => -5
  * 0, 5   => 5
  */
-function getMaxNumber(/* firstNumber, secondNumber */) {
-  throw new Error('Not implemented');
+function getMaxNumber(firstNumber, secondNumber) {
+  const result = Math.max(firstNumber, secondNumber);
+  return result;
 }
 
 /**
@@ -629,6 +637,13 @@ function getMaxNumber(/* firstNumber, secondNumber */) {
  */
 function getRandomInteger(/* min, max */) {
   throw new Error('Not implemented');
+  // const array = [];
+  // let i = 0;
+  // for (let number = min; number <= max; number += 1) {
+  //   array[i] = number;
+  //   i += 1;
+  // }
+  // return array;
 }
 
 /**
@@ -641,8 +656,9 @@ function getRandomInteger(/* min, max */) {
  * @example:
  * 3, 4 => 5
  */
-function getHypotenuse(/* a, b */) {
-  throw new Error('Not implemented');
+function getHypotenuse(a, b) {
+  const result = Math.hypot(a, b);
+  return result;
 }
 
 /**
@@ -660,6 +676,17 @@ function getHypotenuse(/* a, b */) {
  */
 function getCountOfOddNumbers(/* number */) {
   throw new Error('Not implemented');
+  // let result = 0;
+  // let num = 0;
+  // while (num <= number) {
+  //   if (num % 2 !== 0) {
+  //     result += 1;
+  //     num += 1;
+  //   } else {
+  //     num += 1;
+  //   }
+  // }
+  // return result;
 }
 
 module.exports = {
