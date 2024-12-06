@@ -204,15 +204,18 @@ function roundToPowerOfTen(/* num, pow */) {
  *   16 => false
  *   17 => true
  */
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
-  // let result = true;
-  // for (let i = 2; i < n; i + 1) {
-  //   if (n % i === 0) {
-  //     result = false;
-  //   }
-  // }
-  // return result;
+function isPrime(n) {
+  const number = n;
+  let result = true;
+  let divisor = 2;
+  while (divisor < number)
+    if (number % divisor === 0) {
+      result = false;
+      return result;
+    } else {
+      divisor += 1;
+    }
+  return result;
 }
 
 /**
@@ -332,8 +335,18 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  let number = num;
+  let result = true;
+  while (number > 1 && number !== 0) {
+    if (number % 2 === 0) {
+      number /= 2;
+    } else {
+      result = false;
+      return result;
+    }
+  }
+  return result;
 }
 
 /**
@@ -346,8 +359,9 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  const result = Math.sin(num);
+  return result;
 }
 
 /**
@@ -439,8 +453,9 @@ function getNumberValue(/* number */) {
  * 5        => true
  * '5'      => false
  */
-function isNumber(/* number */) {
-  throw new Error('Not implemented');
+function isNumber(number) {
+  const result = Number.isFinite(number);
+  return result;
 }
 
 /**
@@ -454,8 +469,9 @@ function isNumber(/* number */) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(/* number */) {
-  throw new Error('Not implemented');
+function isInteger(number) {
+  const result = Number.isInteger(number);
+  return result;
 }
 
 /**
