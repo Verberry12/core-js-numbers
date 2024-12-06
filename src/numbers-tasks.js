@@ -484,8 +484,9 @@ function isInteger(number) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  const result = Number.parseFloat(str);
+  return result;
 }
 
 /**
@@ -531,8 +532,9 @@ function isSafeInteger(/* number */) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToSmallestInteger(number) {
+  const result = Math.floor(number);
+  return result;
 }
 
 /**
@@ -545,8 +547,9 @@ function roundToSmallestInteger(/* number */) {
  * 5.1  => 6
  * -5.9 => -5
  */
-function roundToLargestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToLargestInteger(number) {
+  const result = Math.ceil(number);
+  return result;
 }
 
 /**
@@ -560,8 +563,9 @@ function roundToLargestInteger(/* number */) {
  * 5.4  => 5
  * -5.5 => -5
  */
-function roundToNearestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToNearestInteger(number) {
+  const result = Math.round(number);
+  return result;
 }
 
 /**
