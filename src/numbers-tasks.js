@@ -90,8 +90,9 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
-  throw new Error('Not implemented');
+function getLinearEquationRoot(a, b) {
+  const x = (-1 * b) / a;
+  return x;
 }
 
 /**
@@ -111,8 +112,9 @@ function getLinearEquationRoot(/* a, b */) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(/* x1, y1, x2, y2 */) {
-  throw new Error('Not implemented');
+function getAngleBetweenVectors(x1, y1, x2, y2) {
+  const result = Math.abs(Math.atan2(y2, x2) - Math.atan2(y1, x1));
+  return result;
 }
 
 /**
@@ -380,8 +382,9 @@ function getSine(num) {
  * 255, 16 => 'ff'
  * 2, 2    => '10'
  */
-function numberToStringInBase(/* number, base */) {
-  throw new Error('Not implemented');
+function numberToStringInBase(number, base) {
+  const result = number.toString(base);
+  return result;
 }
 
 /**
@@ -607,6 +610,8 @@ function getIntegerPartNumber(number) {
  */
 function getSumOfNumbers(/* x1, x2, x3 */) {
   throw new Error('Not implemented');
+  // const result = x1 + x2 + x3;
+  // return result;
 }
 
 /**
