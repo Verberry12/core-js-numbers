@@ -52,10 +52,9 @@ function getCircleCircumference(radius) {
  *  10, 0  => 5
  *  -3, 3  => 0
  */
-function getAverage(/* value1, value2 */) {
-  throw new Error('Not implemented');
-  // const result = (value1 + value2) / 2;
-  // return result;
+function getAverage(value1, value2) {
+  const result = value1 / 2 + value2 / 2;
+  return result;
 }
 
 /**
@@ -623,10 +622,9 @@ function getIntegerPartNumber(number) {
  * 1, 2, 3       => 6
  * 0.1, 0.2, 0.3 => 0.6
  */
-function getSumOfNumbers(/* x1, x2, x3 */) {
-  throw new Error('Not implemented');
-  // const result = x1 + x2 + x3;
-  // return result;
+function getSumOfNumbers(x1, x2, x3) {
+  const result = x1 + x2 + x3;
+  return result.toFixed(1);
 }
 
 /**
@@ -658,17 +656,8 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -5, 0 => -5 | -4 | -3 | -2 | -1 | 0
  * -1, 1 => -1 | 0 | 1
  */
-function getRandomInteger(/* min, max */) {
-  throw new Error('Not implemented');
-  // let num = min;
-  // const array = [];
-  // const amountNum = Math.abs(max - min);
-  // for (let i = 0; i <= amountNum; i += 1) {
-  //   array[i] = num;
-  //   num += 1;
-  // }
-  // array.forEach((element) => Number(element));
-  // return array;
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
